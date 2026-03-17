@@ -1,5 +1,3 @@
-/* Minimal utility helpers used in demos */
-
 .stack {
 	display: flex;
 	flex-direction: column;
@@ -47,7 +45,6 @@
 	clear: both;
 }
 
-/* Task 17: basic responsive show/hide helpers */
 .hide {
 	display: none !important;
 }

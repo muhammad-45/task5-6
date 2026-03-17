@@ -1,9 +1,7 @@
-/* Tasks 4, 5 (and 12): Flexbox Navigation + Card Layout + Form builder */
-
-/* Top navigation with hamburger (CSS-only) */
 .nav-shell {
 	border: 1px solid var(--border);
 	background: var(--surface);
+	border-radius: 10px;
 }
 
 .main-nav {
@@ -51,7 +49,6 @@
 	border-color: var(--border);
 }
 
-/* Dropdown */
 .dropdown {
 	position: relative;
 	display: flex;
@@ -69,6 +66,7 @@
 	left: 0;
 	display: none;
 	min-width: 160px;
+	border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-menu,
@@ -112,7 +110,6 @@
 	}
 }
 
-/* Sidebar navigation */
 .flex-layout {
 	display: flex;
 	gap: var(--gap);
@@ -144,7 +141,6 @@
 	}
 }
 
-/* Task 5: Card layout */
 .card-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -159,6 +155,7 @@
 	flex-direction: column;
 	flex: 1 1 100%;
 	min-width: 240px;
+	border-radius: 10px;
 }
 
 .card h3 {
@@ -184,7 +181,6 @@
 	}
 }
 
-/* Task 12: Flexbox form builder */
 .form-grid {
 	display: flex;
 	gap: var(--gap);

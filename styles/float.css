@@ -1,9 +1,8 @@
-/* Task 2: Float-Based Magazine Layout (and basic float demos) */
-
 .magazine-layout {
 	background: var(--surface);
 	border: 1px solid var(--border);
 	padding: 16px;
+	border-radius: 10px;
 }
 
 .mag-header {
@@ -34,9 +33,13 @@
 
 .fake-photo {
 	width: 140px;
-	height: 90px;
+	height: 190px;
 	border: 1px solid var(--border);
 	background: #f0f0f0;
+	display: grid;
+	place-items: center;
+	color: var(--muted);
+	font-size: 12px;
 }
 
 .float-left {

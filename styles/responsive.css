@@ -1,10 +1,8 @@
-/* Layout pages: holy grail, dashboard, responsive demo, portfolio */
-
-/* Task 7: Holy Grail (float / flex / grid) */
 .hg-demo {
 	border: 1px solid var(--border);
 	background: var(--surface);
 	padding: 10px;
+	border-radius: 10px;
 }
 
 .hg-demo .hg-header,
@@ -22,7 +20,6 @@
 	padding: 8px;
 }
 
-/* Float version */
 .hg-float .hg-nav {
 	float: left;
 	width: 20%;
@@ -53,7 +50,6 @@
 	}
 }
 
-/* Flexbox version */
 .hg-flex .hg-body {
 	display: flex;
 	gap: 10px;
@@ -78,7 +74,6 @@
 	}
 }
 
-/* Grid version */
 .hg-grid {
 	display: grid;
 	gap: 10px;
@@ -120,7 +115,6 @@
 	}
 }
 
-/* Task G: Dashboard */
 .dash {
 	min-height: 100vh;
 }
@@ -176,7 +170,6 @@
 	}
 }
 
-/* Collapse sidebar on tablet */
 @media (max-width: 1024px) {
 	.dash-sidebar {
 		width: 72px;
@@ -187,7 +180,6 @@
 	}
 }
 
-/* Stack on mobile */
 @media (max-width: 700px) {
 	.dash-sidebar {
 		position: static;
@@ -203,7 +195,6 @@
 	}
 }
 
-/* Task 13: Portfolio mixed techniques */
 .portfolio {
 	display: grid;
 	gap: var(--gap);
@@ -272,7 +263,6 @@
 	}
 }
 
-/* Task 14: Responsive data table (table -> cards -> stacked) */
 .data-table {
 	width: 100%;
 	border-collapse: collapse;
