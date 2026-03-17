@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Flexbox Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/flexbox.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Tasks 4/5/12 — Flexbox</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section">
+				<h2>Task 4: Responsive main navigation (hamburger on mobile)</h2>
+				<div class="nav-shell">
+					<nav class="main-nav" aria-label="Main">
+						<div class="brand">Brand</div>
+						<label class="hamburger" for="navToggle">Menu</label>
+						<input class="nav-toggle" id="navToggle" type="checkbox" />
+						<ul class="nav-links-list">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li class="dropdown">
+								<a href="#">Services</a>
+								<ul class="dropdown-menu" aria-label="Dropdown">
+									<li><a href="#">Service A</a></li>
+									<li><a href="#">Service B</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<p class="note">Dropdown stacks on mobile; menu opens with CSS-only toggle.</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 4: Vertical sidebar navigation</h2>
+				<div class="flex-layout">
+					<aside class="side-nav" aria-label="Sidebar navigation">
+						<strong>Sidebar</strong>
+						<ul>
+							<li><a href="#">Section 1</a></li>
+							<li><a href="#">Section 2</a></li>
+							<li><a href="#">Section 3</a></li>
+						</ul>
+					</aside>
+					<div class="flex-content panel">
+						<p>On smaller screens, the sidebar stacks above the content.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 5: Responsive flexbox cards (equal height + actions at bottom)</h2>
+				<div class="card-grid">
+					<article class="card">
+						<h3>Card One</h3>
+						<p>Short content.</p>
+						<div class="actions">
+							<a class="btn" href="#">Action</a>
+							<a class="btn" href="#">Action</a>
+						</div>
+					</article>
+					<article class="card">
+						<h3>Card Two</h3>
+						<p>Longer content to show equal-height behavior. Add more text here so the card becomes taller than others.</p>
+						<div class="actions">
+							<a class="btn" href="#">Action</a>
+						</div>
+					</article>
+					<article class="card">
+						<h3>Card Three</h3>
+						<p>Medium content.</p>
+						<div class="actions">
+							<a class="btn" href="#">Action</a>
+						</div>
+					</article>
+				</div>
+				<p class="note">1 column (mobile), 2 (tablet), 3 (desktop).</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 12: Flexbox form builder (sections stack on mobile)</h2>
+				<div class="form-grid">
+					<form class="form-section" action="#" method="get">
+						<strong>Account</strong>
+						<div class="field-row">
+							<label class="field">
+								<span>Email</span>
+								<input type="email" name="email" placeholder="name@example.com" />
+							</label>
+							<label class="field">
+								<span>Password</span>
+								<input type="password" name="password" placeholder="••••••" />
+							</label>
+						</div>
+						<label class="field wide">
+							<span>Bio</span>
+							<textarea name="bio" rows="3" placeholder="Basic textarea"></textarea>
+						</label>
+						<button class="btn" type="submit">Submit</button>
+					</form>
+
+					<form class="form-section" action="#" method="get">
+						<strong>Preferences</strong>
+						<div class="field-row">
+							<label class="field">
+								<span>Plan</span>
+								<select name="plan">
+									<option>Basic</option>
+									<option>Pro</option>
+								</select>
+							</label>
+							<label class="field">
+								<span>Phone</span>
+								<input type="tel" name="phone" placeholder="000-000-0000" />
+							</label>
+						</div>
+						<p class="note">Simple responsive form controls with flexbox.</p>
+					</form>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
+

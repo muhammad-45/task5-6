@@ -1,0 +1,90 @@
+/* Task 1: Display Property Showcase */
+
+.display-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--gap);
+}
+
+@media (min-width: 768px) {
+	.display-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.demo-area {
+	border: 1px dashed var(--border);
+	padding: 10px;
+	background: var(--surface);
+}
+
+.tag {
+	border: 1px solid var(--border);
+	padding: 6px 8px;
+	margin: 6px;
+	background: #fff;
+}
+
+.d-block {
+	display: block;
+}
+
+.d-inline {
+	display: inline;
+}
+
+.d-inline-block {
+	display: inline-block;
+	width: 120px;
+}
+
+/* Table display without table markup */
+.fake-table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.fake-tr {
+	display: table-row;
+}
+
+.fake-td {
+	display: table-cell;
+	border: 1px solid var(--border);
+	padding: 8px;
+}
+
+/* Responsive display changes */
+.responsive-items .item {
+	display: inline-block;
+	width: 140px;
+	margin: 6px;
+}
+
+@media (max-width: 600px) {
+	.responsive-items .item {
+		display: block;
+		width: auto;
+		margin: 8px 0;
+	}
+}
+
+/* Hidden elements demo */
+.hide-on-mobile {
+	display: block;
+}
+
+.show-on-mobile {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	.show-on-mobile {
+		display: block;
+	}
+}
+

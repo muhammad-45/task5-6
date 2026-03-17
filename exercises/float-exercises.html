@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Float Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/float.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Task 2 — Float Basics</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+					<a href="../layouts/magazine-float.html">Open Magazine Layout</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section clearfix">
+				<h2>Wrapped “image” with text</h2>
+				<div class="fake-photo float-left"></div>
+				<p>
+					This paragraph wraps around a floated block. The “image” is just a gray box.
+					Floats allow text to flow around the element.
+				</p>
+				<p>
+					Add more text to make the wrap obvious. On smaller screens in the magazine page, floats are removed.
+				</p>
+			</section>
+
+			<section class="panel section clearfix">
+				<h2>Sidebar + main (float)</h2>
+				<div class="mag-main">
+					<div class="sidebar-box">
+						<strong>Main</strong>
+						<p class="note">Float left, 68% width.</p>
+					</div>
+				</div>
+				<aside class="mag-sidebar">
+					<div class="sidebar-box">
+						<strong>Sidebar</strong>
+						<p class="note">Float right, 30% width.</p>
+					</div>
+				</aside>
+			</section>
+		</main>
+	</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Magazine Float Layout</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/float.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Task 2 — Float-Based Magazine Layout</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container">
+			<article class="magazine-layout clearfix">
+				<header class="mag-header">
+					<strong>Simple Magazine</strong>
+					<div class="muted">Floats + media queries only</div>
+				</header>
+
+				<section class="mag-main">
+					<h2 style="margin-top:0">Main Article</h2>
+					<div class="fake-photo float-right" aria-hidden="true"></div>
+					<p>
+						This is the main content area. The gray box is a floated “image” with text wrapping around it.
+					</p>
+
+					<div class="mag-columns clearfix">
+						<div class="col">
+							<p>
+								Column 1 content. Add a few sentences to show a multi-column feel using floats.
+							</p>
+							<p>
+								More content in column 1. More content in column 1.
+							</p>
+						</div>
+						<div class="col">
+							<p>
+								Column 2 content. More text here to balance the columns.
+							</p>
+							<p>
+								More content in column 2. More content in column 2.
+							</p>
+						</div>
+					</div>
+
+					<p class="note">On mobile, columns become a single stacked column.</p>
+				</section>
+
+				<aside class="mag-sidebar">
+					<div class="sidebar-box">
+						<strong>Sidebar</strong>
+						<p class="note">Floats on desktop, stacks below on mobile.</p>
+					</div>
+					<div class="sidebar-box">
+						<strong>Related</strong>
+						<ul>
+							<li>Link 1</li>
+							<li>Link 2</li>
+						</ul>
+					</div>
+				</aside>
+			</article>
+		</main>
+	</body>
+</html>
+

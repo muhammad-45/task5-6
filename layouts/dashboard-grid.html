@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Dashboard Grid</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/responsive.css" />
+	</head>
+	<body>
+		<div class="dash">
+			<aside class="dash-sidebar" aria-label="Sidebar">
+				<strong>Menu</strong>
+				<ul>
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Users</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+				<p class="note">Collapses on tablet.</p>
+				<p class="note">Stacks on mobile.</p>
+				<p><a class="btn" href="../index.html">Home</a></p>
+			</aside>
+
+			<main class="dash-main" aria-label="Main content">
+				<header class="dash-top">
+					<strong>Task G — Dashboard</strong>
+					<div class="muted">Grid for layout, flexbox inside cards</div>
+				</header>
+
+				<section class="stats" aria-label="Stats">
+					<div class="stat">
+						<strong>Stat A</strong>
+						<span class="muted">Value</span>
+						<a class="btn" href="#">Details</a>
+					</div>
+					<div class="stat">
+						<strong>Stat B</strong>
+						<span class="muted">Value</span>
+						<a class="btn" href="#">Details</a>
+					</div>
+					<div class="stat">
+						<strong>Stat C</strong>
+						<span class="muted">Value</span>
+						<a class="btn" href="#">Details</a>
+					</div>
+				</section>
+
+				<hr class="hr" />
+
+				<section class="content-grid" aria-label="Content">
+					<div class="panel">
+						<h2 style="margin-top:0">Main panel</h2>
+						<p>Simple responsive grid: becomes two columns on wider screens.</p>
+					</div>
+					<div class="panel">
+						<h2 style="margin-top:0">Side panel</h2>
+						<p class="note">Stacks under main panel on mobile.</p>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
+

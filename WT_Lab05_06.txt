@@ -1,0 +1,121 @@
+5. Lab Tasks
+Task 1: Display Property Showcase
+Create an HTML page demonstrating all display properties with responsive behavior:
+* Block vs inline vs inline-block comparison
+* Table display without table markup
+* Responsive display changes with media queries
+* Hidden elements demonstration on different screens
+Task 2: Float-Based Magazine Layout
+Build a magazine-style layout using only floats with responsive design:
+* Multi-column text layout that becomes single column on mobile
+* Wrapped images with text
+* Responsive sidebar and main content areas
+* Media queries to adjust float behavior
+Task 3: Positioning Challenge
+Create a complex positioned layout featuring responsive behavior:
+* Fixed header that becomes static on mobile
+* Absolutely positioned modal dialog that becomes full-screen on mobile
+* Sticky sidebar elements that stack on small screens
+* Z-index layering demonstration
+
+Task 4: Flexbox Navigation System
+Build a complete responsive navigation system using flexbox:
+* Horizontal main navigation that becomes hamburger menu on mobile
+* Vertical sidebar navigation
+* Responsive mobile navigation with transform animations
+* Dropdown menus with flexbox that stack on mobile
+Task 5: Flexbox Card Layout
+Create a responsive card layout using flexbox:
+* Equal height cards regardless of content
+* Responsive card arrangement (1 column mobile, 2 tablet, 3 desktop)
+* Flexible card content alignment
+* Card actions aligned to bottom
+Task 6: CSS Grid Photo Gallery
+Build a responsive photo gallery using CSS Grid:
+* Masonry-style layout on desktop
+* Responsive grid tracks that adapt to screen size
+* Grid area naming with media query adjustments
+* Hover effects and overlays
+Task 7: Holy Grail Layout Implementation
+Create the holy grail layout using three different methods with responsive design:
+1. Float-based implementation with media queries
+2. Flexbox implementation with mobile-first approach
+3. CSS Grid implementation with responsive grid areas Compare the approaches and document differences
+
+Task 8: E-commerce Product Grid
+Build an e-commerce product listing using CSS Grid with responsive breakpoints:
+* Responsive product cards (1 column mobile, 2 tablet, 4 desktop)
+* Filter sidebar that becomes off-canvas on mobile
+* Grid template areas for complex layout
+* Product image and details arrangement
+Task G: Dashboard Layout
+Create a responsive admin dashboard layout combining techniques:
+* CSS Grid for main layout structure
+* Flexbox for component internals
+* Fixed sidebar that collapses on tablet
+* Responsive main content area
+* Stat cards using flexbox that stack on mobile
+Task 10: Media Query Demonstration Page
+Create a comprehensive media query demonstration:
+* Breakpoint indicators showing current screen size
+* Layout changes at different breakpoints
+* Typography scaling demonstration
+* Navigation pattern changes
+6. Advanced Challenges
+Task 11: Responsive CSS Grid Magazine Layout Create a complex magazine layout featuring:
+* Asymmetric grid columns on desktop
+* Simplified symmetric grid on tablet
+
+* Single column layout on mobile
+* Responsive typography and images
+Task 12: Flexbox Form Builder with Responsive Design Build a dynamic form layout system:
+* Flexible form sections that stack on mobile
+* Responsive form controls with appropriate input types
+* Conditional field layouts based on screen size
+* Multi-column form arrangements on desktop
+Task 13: Portfolio Layout with Mixed Techniques
+Create a responsive portfolio website combining all layout methods:
+* Grid for overall page structure
+* Flexbox for project galleries (masonry on desktop, stacked on mobile)
+* Positioning for decorative elements
+* Media queries for different device orientations
+Task 14: Responsive Data Table Create a responsive data table that:
+* Displays as full table on desktop
+* Converts to card layout on tablet
+* Becomes stacked single column on mobile
+* Maintains accessibility and usability
+Task 15: Mobile-First Landing Page
+Build a complete landing page using mobile-first approach:
+* Base styles for mobile devices
+* Progressive enhancement for larger screens
+
+* Responsive images and typography
+* Performance optimization for mobile
+7. Media Query Breakpoints Practice
+Task 16: Common Breakpoint Implementation
+Implement responsive design using common breakpoints:
+/* Mobile First Approach */
+/* Base styles for mobile (0px - 7c7px) */
+
+
+/* Tablet (7c8px and up) */
+@media (min-width: 7c8px) { /* Styles */ }
+
+
+/* Small Desktop (1024px and up) */ @media (min-width: 1024px) { /* Styles */ }
+
+/* Large Desktop (1200px and up) */ @media (min-width: 1200px) { /* Styles */ }
+
+/* Extra Large (1400px and up) */
+@media (min-width: 1400px) { /* Styles */ }
+Task 17: Responsive Utility Classes Create a set of responsive utility classes:
+* Show/hide elements at different breakpoints
+* Responsive spacing classes
+* Text alignment per breakpoint
+* Flexbox utilities for different screens
+
+Task 18: Dark Mode s Preference Media Queries Implement additional media queries:
+* prefers-color-scheme for dark/light mode
+* prefers-reduced-motion for accessibility
+* prefers-contrast for high contrast mode
+* Print media queries for printing

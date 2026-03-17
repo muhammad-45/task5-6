@@ -1,0 +1,314 @@
+/* Layout pages: holy grail, dashboard, responsive demo, portfolio */
+
+/* Task 7: Holy Grail (float / flex / grid) */
+.hg-demo {
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 10px;
+}
+
+.hg-demo .hg-header,
+.hg-demo .hg-footer {
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 8px;
+}
+
+.hg-demo .hg-nav,
+.hg-demo .hg-aside,
+.hg-demo .hg-main {
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 8px;
+}
+
+/* Float version */
+.hg-float .hg-nav {
+	float: left;
+	width: 20%;
+}
+
+.hg-float .hg-aside {
+	float: right;
+	width: 20%;
+}
+
+.hg-float .hg-main {
+	margin: 0 22%;
+}
+
+.hg-float .hg-header,
+.hg-float .hg-footer {
+	clear: both;
+}
+
+@media (max-width: 700px) {
+	.hg-float .hg-nav,
+	.hg-float .hg-aside {
+		float: none;
+		width: auto;
+	}
+	.hg-float .hg-main {
+		margin: 0;
+	}
+}
+
+/* Flexbox version */
+.hg-flex .hg-body {
+	display: flex;
+	gap: 10px;
+}
+
+.hg-flex .hg-nav,
+.hg-flex .hg-aside {
+	flex: 0 0 180px;
+}
+
+.hg-flex .hg-main {
+	flex: 1;
+}
+
+@media (max-width: 700px) {
+	.hg-flex .hg-body {
+		flex-direction: column;
+	}
+	.hg-flex .hg-nav,
+	.hg-flex .hg-aside {
+		flex-basis: auto;
+	}
+}
+
+/* Grid version */
+.hg-grid {
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+		"header"
+		"nav"
+		"main"
+		"aside"
+		"footer";
+}
+
+.hg-grid .hg-header {
+	grid-area: header;
+}
+
+.hg-grid .hg-nav {
+	grid-area: nav;
+}
+
+.hg-grid .hg-main {
+	grid-area: main;
+}
+
+.hg-grid .hg-aside {
+	grid-area: aside;
+}
+
+.hg-grid .hg-footer {
+	grid-area: footer;
+}
+
+@media (min-width: 900px) {
+	.hg-grid {
+		grid-template-columns: 180px 1fr 180px;
+		grid-template-areas:
+			"header header header"
+			"nav main aside"
+			"footer footer footer";
+	}
+}
+
+/* Task G: Dashboard */
+.dash {
+	min-height: 100vh;
+}
+
+.dash-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 220px;
+	background: var(--surface);
+	border-right: 1px solid var(--border);
+	padding: 12px;
+}
+
+.dash-main {
+	margin-left: 220px;
+	padding: 16px;
+}
+
+.dash-top {
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 10px;
+	margin-bottom: 16px;
+}
+
+.stats {
+	display: flex;
+	gap: var(--gap);
+	flex-wrap: wrap;
+}
+
+.stat {
+	flex: 1 1 200px;
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.content-grid {
+	display: grid;
+	gap: var(--gap);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+	.content-grid {
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
+/* Collapse sidebar on tablet */
+@media (max-width: 1024px) {
+	.dash-sidebar {
+		width: 72px;
+		overflow: hidden;
+	}
+	.dash-main {
+		margin-left: 72px;
+	}
+}
+
+/* Stack on mobile */
+@media (max-width: 700px) {
+	.dash-sidebar {
+		position: static;
+		width: auto;
+		border-right: none;
+		border-bottom: 1px solid var(--border);
+	}
+	.dash-main {
+		margin-left: 0;
+	}
+	.stats {
+		flex-direction: column;
+	}
+}
+
+/* Task 13: Portfolio mixed techniques */
+.portfolio {
+	display: grid;
+	gap: var(--gap);
+	grid-template-areas:
+		"header"
+		"projects"
+		"about"
+		"footer";
+}
+
+.portfolio-header {
+	grid-area: header;
+}
+
+.portfolio-projects {
+	grid-area: projects;
+}
+
+.portfolio-about {
+	grid-area: about;
+}
+
+.portfolio-footer {
+	grid-area: footer;
+}
+
+.project-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.project {
+	position: relative;
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 10px;
+	flex: 1 1 240px;
+	min-height: 120px;
+}
+
+.badge {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 2px 6px;
+	font-size: 12px;
+}
+
+@media (min-width: 900px) {
+	.portfolio {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+			"header header"
+			"projects about"
+			"footer footer";
+		align-items: start;
+	}
+}
+
+@media (max-width: 700px) {
+	.project-gallery {
+		flex-direction: column;
+	}
+}
+
+/* Task 14: Responsive data table (table -> cards -> stacked) */
+.data-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+	border: 1px solid var(--border);
+	padding: 8px;
+	text-align: left;
+}
+
+.data-cards {
+	display: none;
+	gap: 10px;
+}
+
+.data-card {
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 10px;
+}
+
+@media (max-width: 1024px) {
+	.data-table {
+		display: none;
+	}
+	.data-cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.data-cards {
+		grid-template-columns: 1fr;
+	}
+}
+

@@ -1,0 +1,178 @@
+/* Tasks 10, 16, 18: Media query demonstration */
+
+.mq-indicators {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.mq-indicators .pill {
+	display: none;
+}
+
+/* Mobile first: show the base pill by default */
+.pill.base {
+	display: inline-block;
+}
+
+@media (min-width: 768px) {
+	.pill.base {
+		display: none;
+	}
+	.pill.md {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1024px) {
+	.pill.md {
+		display: none;
+	}
+	.pill.lg {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1200px) {
+	.pill.lg {
+		display: none;
+	}
+	.pill.xl {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1400px) {
+	.pill.xl {
+		display: none;
+	}
+	.pill.xxl {
+		display: inline-block;
+	}
+}
+
+.mq-layout {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--gap);
+}
+
+@media (min-width: 768px) {
+	.mq-layout {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 1024px) {
+	.mq-layout {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+/* Typography scaling demo */
+.type-demo h1 {
+	font-size: 20px;
+	margin: 0 0 6px 0;
+}
+
+@media (min-width: 768px) {
+	.type-demo h1 {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.type-demo h1 {
+		font-size: 28px;
+	}
+}
+
+/* Navigation pattern changes */
+.mq-nav {
+	border: 1px solid var(--border);
+	background: var(--surface);
+}
+
+.mq-nav .bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+}
+
+.mq-nav input {
+	display: none;
+}
+
+.mq-nav label {
+	border: 1px solid var(--border);
+	padding: 6px 8px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.mq-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	border-top: 1px solid var(--border);
+}
+
+.mq-nav a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.mq-nav input:checked ~ ul {
+	display: block;
+}
+
+@media (min-width: 1024px) {
+	.mq-nav label {
+		display: none;
+	}
+	.mq-nav ul {
+		display: flex;
+		gap: 10px;
+		border-top: none;
+		padding: 10px;
+	}
+	.mq-nav a {
+		padding: 6px 8px;
+		border: 1px solid transparent;
+	}
+	.mq-nav a:hover {
+		border-color: var(--border);
+	}
+}
+
+/* Task 18: preference media queries */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #111111;
+		--surface: #1a1a1a;
+		--text: #f0f0f0;
+		--muted: #b0b0b0;
+		--border: #333333;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+@media print {
+	.no-print {
+		display: none !important;
+	}
+	body {
+		background: #fff;
+	}
+}
+

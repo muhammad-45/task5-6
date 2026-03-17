@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Position Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/position.css" />
+	</head>
+	<body>
+		<header class="fixed-header no-print">
+			<div class="container">
+				<strong>Task 3 — Fixed Header</strong>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+					<a class="btn" href="#modal">Open Modal</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container pos-page stack">
+			<section class="panel section">
+				<h2>Sticky sidebar elements</h2>
+				<div class="pos-demo">
+					<aside class="panel sticky-box">
+						<strong>Sticky Sidebar</strong>
+						<p class="note">Sticky on desktop, stacks on small screens.</p>
+						<ul>
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ul>
+					</aside>
+
+					<div class="panel">
+						<p>
+							Scroll to see the sidebar stick (desktop). On mobile, the header becomes static and the sidebar becomes normal stacked content.
+						</p>
+						<p>
+							Extra content for scrolling. Extra content for scrolling. Extra content for scrolling.
+						</p>
+						<p>
+							Extra content for scrolling. Extra content for scrolling. Extra content for scrolling.
+						</p>
+						<p>
+							Extra content for scrolling. Extra content for scrolling. Extra content for scrolling.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel section">
+				<h2>Z-index layering</h2>
+				<div class="layer-area">
+					<div class="layer a">z-index: 1</div>
+					<div class="layer b">z-index: 2</div>
+					<div class="layer c">z-index: 3</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Modal (absolute positioned, full-screen on mobile) -->
+		<div id="modal" class="modal-overlay" aria-label="Modal overlay">
+			<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+				<h2 id="modalTitle" style="margin-top:0">Modal Dialog</h2>
+				<p>This is positioned with CSS. On mobile it becomes full-screen.</p>
+				<a class="btn" href="#">Close</a>
+			</div>
+		</div>
+	</body>
+</html>
+

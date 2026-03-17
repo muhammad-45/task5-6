@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Display Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/display.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Task 1 — Display Property Showcase</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section">
+				<h2>Block vs Inline vs Inline-block</h2>
+				<div class="demo-area">
+					<span class="tag d-block">display: block</span>
+					<span class="tag d-block">display: block</span>
+					<span class="tag d-inline">display: inline</span>
+					<span class="tag d-inline">display: inline</span>
+					<span class="tag d-inline-block">display: inline-block</span>
+					<span class="tag d-inline-block">display: inline-block</span>
+				</div>
+				<p class="note">Notice line breaks (block) vs flowing text (inline) vs set widths (inline-block).</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Table display (no table markup)</h2>
+				<div class="fake-table">
+					<div class="fake-tr">
+						<div class="fake-td"><strong>Name</strong></div>
+						<div class="fake-td"><strong>Role</strong></div>
+						<div class="fake-td"><strong>Status</strong></div>
+					</div>
+					<div class="fake-tr">
+						<div class="fake-td">Alex</div>
+						<div class="fake-td">Editor</div>
+						<div class="fake-td">Active</div>
+					</div>
+					<div class="fake-tr">
+						<div class="fake-td">Sam</div>
+						<div class="fake-td">Author</div>
+						<div class="fake-td">Active</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel section">
+				<h2>Responsive display changes</h2>
+				<div class="demo-area responsive-items">
+					<div class="box item">Item A</div>
+					<div class="box item">Item B</div>
+					<div class="box item">Item C</div>
+				</div>
+				<p class="note">On small screens (≤600px), items switch to block (stacked).</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Hidden elements (different screens)</h2>
+				<div class="demo-area">
+					<div class="box hide-on-mobile">Visible on desktop, hidden on mobile</div>
+					<div class="box show-on-mobile">Visible on mobile, hidden on desktop</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
+

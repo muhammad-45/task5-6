@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Grid Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/grid.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Tasks 6/8 — CSS Grid</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section">
+				<h2>Task 6: Photo gallery (grid + “masonry” effect)</h2>
+				<div class="gallery-layout">
+					<div class="gallery-title">
+						<p class="note">Tiles span different row heights. Hover for overlay.</p>
+					</div>
+					<div class="gallery-grid" aria-label="Photo gallery">
+						<div class="tile span-2" tabindex="0">Tile 1<div class="overlay">Overlay</div></div>
+						<div class="tile" tabindex="0">Tile 2<div class="overlay">Overlay</div></div>
+						<div class="tile span-3" tabindex="0">Tile 3<div class="overlay">Overlay</div></div>
+						<div class="tile" tabindex="0">Tile 4<div class="overlay">Overlay</div></div>
+						<div class="tile span-2" tabindex="0">Tile 5<div class="overlay">Overlay</div></div>
+						<div class="tile" tabindex="0">Tile 6<div class="overlay">Overlay</div></div>
+					</div>
+					<aside class="panel gallery-info">
+						<strong>Info panel</strong>
+						<p class="note">Grid areas rearrange at wider screens.</p>
+					</aside>
+				</div>
+			</section>
+
+			<section class="panel section shop">
+				<h2>Task 8: E-commerce product grid (grid areas + responsive + off-canvas filters)</h2>
+				<div class="shop-shell">
+					<div class="shopbar">
+						<strong>Products</strong>
+						<label class="btn" for="filterToggle">Filters</label>
+					</div>
+
+					<input class="filter-toggle" id="filterToggle" type="checkbox" />
+					<aside class="filters" aria-label="Filters">
+						<strong>Filter</strong>
+						<p class="note">On mobile this slides in.</p>
+						<label class="field">
+							<span>Category</span>
+							<select>
+								<option>All</option>
+								<option>A</option>
+								<option>B</option>
+							</select>
+						</label>
+						<a class="btn" href="#">Apply</a>
+						<label class="btn" for="filterToggle" style="margin-left:8px">Close</label>
+					</aside>
+
+					<section class="products" aria-label="Product list">
+						<div class="product-grid">
+							<article class="product">
+								<div class="img" aria-hidden="true"></div>
+								<div>
+									<strong>Item 1</strong>
+									<div class="muted">$10</div>
+								</div>
+							</article>
+							<article class="product">
+								<div class="img" aria-hidden="true"></div>
+								<div>
+									<strong>Item 2</strong>
+									<div class="muted">$12</div>
+								</div>
+							</article>
+							<article class="product">
+								<div class="img" aria-hidden="true"></div>
+								<div>
+									<strong>Item 3</strong>
+									<div class="muted">$8</div>
+								</div>
+							</article>
+							<article class="product">
+								<div class="img" aria-hidden="true"></div>
+								<div>
+									<strong>Item 4</strong>
+									<div class="muted">$15</div>
+								</div>
+							</article>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
+

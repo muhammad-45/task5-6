@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Responsive Demo</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/responsive.css" />
+		<link rel="stylesheet" href="../styles/grid.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Tasks 11/14/15 — Responsive Demo</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section">
+				<h2>Task 15: Mobile-first landing section</h2>
+				<p>
+					Base styles are mobile-first. As the screen gets wider, other pages use min-width breakpoints.
+				</p>
+				<div class="row">
+					<a class="btn" href="#">Primary</a>
+					<a class="btn" href="#">Secondary</a>
+				</div>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 11: Responsive CSS Grid “magazine” section</h2>
+				<div class="mag-grid" aria-label="Magazine grid">
+					<div class="tile feature" tabindex="0">Feature<div class="overlay">Overlay</div></div>
+					<div class="tile" tabindex="0">Story<div class="overlay">Overlay</div></div>
+					<div class="tile" tabindex="0">Story<div class="overlay">Overlay</div></div>
+					<div class="tile" tabindex="0">Story<div class="overlay">Overlay</div></div>
+					<div class="tile" tabindex="0">Story<div class="overlay">Overlay</div></div>
+				</div>
+				<p class="note">1 column (mobile), 2 columns (tablet), asymmetric columns (desktop).</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 14: Responsive data table</h2>
+				<table class="data-table" aria-label="Data table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Department</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Ana</td>
+							<td>Sales</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td>Omar</td>
+							<td>Support</td>
+							<td>Active</td>
+						</tr>
+						<tr>
+							<td>Lee</td>
+							<td>IT</td>
+							<td>On Leave</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="data-cards" aria-label="Card version">
+					<div class="data-card">
+						<strong>Ana</strong>
+						<div class="muted">Sales</div>
+						<div>Status: Active</div>
+					</div>
+					<div class="data-card">
+						<strong>Omar</strong>
+						<div class="muted">Support</div>
+						<div>Status: Active</div>
+					</div>
+					<div class="data-card">
+						<strong>Lee</strong>
+						<div class="muted">IT</div>
+						<div>Status: On Leave</div>
+					</div>
+				</div>
+				<p class="note">Desktop shows table; smaller screens show cards.</p>
+			</section>
+		</main>
+	</body>
+</html>
+

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Media Query Exercises</title>
+		<link rel="stylesheet" href="../styles/base.css" />
+		<link rel="stylesheet" href="../styles/utilities.css" />
+		<link rel="stylesheet" href="../styles/media-queries.css" />
+	</head>
+	<body>
+		<header class="page-header">
+			<div class="container">
+				<h1 class="page-title">Tasks 10/16/18 — Media Queries</h1>
+				<nav class="nav-links">
+					<a href="../index.html">Home</a>
+					<span class="muted no-print">Resize to see breakpoints</span>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container stack">
+			<section class="panel section">
+				<h2>Task 10: Breakpoint indicators</h2>
+				<div class="mq-indicators">
+					<span class="pill base">0–767 (Base)</span>
+					<span class="pill md">≥768 (Tablet)</span>
+					<span class="pill lg">≥1024 (Small Desktop)</span>
+					<span class="pill xl">≥1200 (Large Desktop)</span>
+					<span class="pill xxl">≥1400 (Extra Large)</span>
+				</div>
+				<p class="note">Only one pill shows at a time based on screen width.</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 10: Layout changes at breakpoints</h2>
+				<div class="mq-layout" aria-label="Boxes">
+					<div class="box">Box 1</div>
+					<div class="box">Box 2</div>
+					<div class="box">Box 3</div>
+				</div>
+				<p class="note">1 column on mobile, 2 on tablet, 3 on desktop.</p>
+			</section>
+
+			<section class="panel section type-demo">
+				<h2>Task 10: Typography scaling</h2>
+				<h1>Heading scales by breakpoint</h1>
+				<p class="muted">This uses min-width media queries.</p>
+			</section>
+
+			<section class="panel section">
+				<h2>Task 10: Navigation pattern changes</h2>
+				<nav class="mq-nav" aria-label="Responsive nav">
+					<div class="bar">
+						<strong>Nav</strong>
+						<label for="mqNavToggle">Menu</label>
+					</div>
+					<input id="mqNavToggle" type="checkbox" />
+					<ul>
+						<li><a href="#">Link A</a></li>
+						<li><a href="#">Link B</a></li>
+						<li><a href="#">Link C</a></li>
+					</ul>
+				</nav>
+				<p class="note">Also includes print/dark-mode/reduced-motion media queries in CSS.</p>
+			</section>
+		</main>
+	</body>
+</html>
+

@@ -1,0 +1,227 @@
+/* Tasks 4, 5 (and 12): Flexbox Navigation + Card Layout + Form builder */
+
+/* Top navigation with hamburger (CSS-only) */
+.nav-shell {
+	border: 1px solid var(--border);
+	background: var(--surface);
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 10px;
+}
+
+.brand {
+	font-weight: 600;
+}
+
+.nav-toggle {
+	display: none;
+}
+
+.hamburger {
+	display: none;
+	border: 1px solid var(--border);
+	padding: 6px 8px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.nav-links-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.nav-links-list a {
+	display: inline-block;
+	padding: 6px 8px;
+	border: 1px solid transparent;
+	text-decoration: none;
+}
+
+.nav-links-list a:focus,
+.nav-links-list a:hover {
+	border-color: var(--border);
+}
+
+/* Dropdown */
+.dropdown {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.dropdown-menu {
+	list-style: none;
+	margin: 0;
+	padding: 6px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	min-width: 160px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.dropdown-menu a {
+	padding: 6px 8px;
+}
+
+@media (max-width: 700px) {
+	.hamburger {
+		display: inline-block;
+	}
+	.nav-links-list {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 6px;
+		padding: 10px;
+		border-top: 1px solid var(--border);
+		transform: translateY(-6px);
+		transition: transform 150ms ease;
+	}
+	.nav-toggle:checked ~ .nav-links-list {
+		display: flex;
+		transform: translateY(0);
+	}
+	.dropdown-menu {
+		position: static;
+		border: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		margin-left: 10px;
+	}
+}
+
+/* Sidebar navigation */
+.flex-layout {
+	display: flex;
+	gap: var(--gap);
+	align-items: stretch;
+}
+
+.side-nav {
+	flex: 0 0 220px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 10px;
+}
+
+.side-nav ul {
+	margin: 0;
+	padding-left: 18px;
+}
+
+.flex-content {
+	flex: 1;
+}
+
+@media (max-width: 800px) {
+	.flex-layout {
+		flex-direction: column;
+	}
+	.side-nav {
+		flex-basis: auto;
+	}
+}
+
+/* Task 5: Card layout */
+.card-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.card {
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+	min-width: 240px;
+}
+
+.card h3 {
+	margin: 0 0 6px 0;
+	font-size: 15px;
+}
+
+.card .actions {
+	margin-top: auto;
+	display: flex;
+	gap: 10px;
+}
+
+@media (min-width: 768px) {
+	.card {
+		flex-basis: calc(50% - var(--gap));
+	}
+}
+
+@media (min-width: 1024px) {
+	.card {
+		flex-basis: calc(33.333% - var(--gap));
+	}
+}
+
+/* Task 12: Flexbox form builder */
+.form-grid {
+	display: flex;
+	gap: var(--gap);
+	flex-wrap: wrap;
+}
+
+.form-section {
+	flex: 1 1 300px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 12px;
+}
+
+.field-row {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.field {
+	flex: 1 1 160px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 10px 0;
+}
+
+.field input,
+.field select,
+.field textarea {
+	padding: 8px;
+	border: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+	.field.wide {
+		flex-basis: 100%;
+	}
+}
+

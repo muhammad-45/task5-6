@@ -1,0 +1,86 @@
+/* Minimal utility helpers used in demos */
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
+.row {
+	display: flex;
+	gap: var(--gap);
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap);
+}
+
+.center {
+	display: grid;
+	place-items: center;
+}
+
+.box {
+	border: 1px solid var(--border);
+	background: var(--surface);
+	padding: 10px;
+}
+
+.pill {
+	display: inline-block;
+	padding: 2px 8px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	font-size: 12px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Task 17: basic responsive show/hide helpers */
+.hide {
+	display: none !important;
+}
+
+.show-inline {
+	display: inline !important;
+}
+
+.show-block {
+	display: block !important;
+}
+
+@media (min-width: 768px) {
+	.hide-md {
+		display: none !important;
+	}
+	.show-md {
+		display: block !important;
+	}
+	.text-center-md {
+		text-align: center;
+	}
+}
+
+@media (min-width: 1024px) {
+	.hide-lg {
+		display: none !important;
+	}
+	.show-lg {
+		display: block !important;
+	}
+	.text-right-lg {
+		text-align: right;
+	}
+}
+

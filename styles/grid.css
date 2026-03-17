@@ -1,0 +1,206 @@
+/* Tasks 6, 8 (and 11): CSS Grid demos */
+
+/* Task 6: Photo gallery grid */
+.gallery-layout {
+	display: grid;
+	gap: var(--gap);
+	grid-template-areas:
+		"title"
+		"grid"
+		"info";
+}
+
+.gallery-title {
+	grid-area: title;
+}
+
+.gallery-grid {
+	grid-area: grid;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	grid-auto-rows: 90px;
+}
+
+.gallery-info {
+	grid-area: info;
+}
+
+.tile {
+	border: 1px solid var(--border);
+	background: #f3f3f3;
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+}
+
+.tile .overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.35);
+	color: #fff;
+	display: grid;
+	place-items: center;
+	opacity: 0;
+	transition: opacity 150ms ease;
+}
+
+.tile:hover .overlay,
+.tile:focus-within .overlay {
+	opacity: 1;
+}
+
+.span-2 {
+	grid-row: span 2;
+}
+
+.span-3 {
+	grid-row: span 3;
+}
+
+@media (min-width: 900px) {
+	.gallery-layout {
+		grid-template-columns: 1fr 280px;
+		grid-template-areas:
+			"title info"
+			"grid info";
+		align-items: start;
+	}
+}
+
+/* Task 8: E-commerce product grid with off-canvas filters */
+.shop {
+	border: 1px solid var(--border);
+	background: var(--surface);
+}
+
+.shop-shell {
+	display: grid;
+	grid-template-areas:
+		"shopbar"
+		"products";
+}
+
+.shopbar {
+	grid-area: shopbar;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px;
+	border-bottom: 1px solid var(--border);
+}
+
+.filter-toggle {
+	display: none;
+}
+
+.filters {
+	grid-area: filters;
+	border-right: 1px solid var(--border);
+	padding: 10px;
+}
+
+.products {
+	grid-area: products;
+	padding: 10px;
+}
+
+.product-grid {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr;
+}
+
+.product {
+	border: 1px solid var(--border);
+	background: #fff;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	gap: 10px;
+}
+
+.product .img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid var(--border);
+	background: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+	.product-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.shop-shell {
+		grid-template-columns: 260px 1fr;
+		grid-template-areas:
+			"shopbar shopbar"
+			"filters products";
+	}
+	.product-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.product {
+		grid-template-columns: 1fr;
+	}
+	.product .img {
+		width: 100%;
+		height: 120px;
+	}
+}
+
+/* Off-canvas behavior on mobile */
+@media (max-width: 1023px) {
+	.shop-shell {
+		position: relative;
+	}
+	.filters {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: min(280px, 85vw);
+		background: var(--surface);
+		transform: translateX(-105%);
+		transition: transform 150ms ease;
+		z-index: 60;
+	}
+	.filter-toggle:checked ~ .filters {
+		transform: translateX(0);
+	}
+}
+
+/* Task 11: Responsive grid “magazine” layout */
+.mag-grid {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr;
+}
+
+.mag-grid .tile {
+	min-height: 90px;
+}
+
+/* Tablet: symmetric 2 columns */
+@media (min-width: 768px) {
+	.mag-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Desktop: asymmetric columns */
+@media (min-width: 1024px) {
+	.mag-grid {
+		grid-template-columns: 2fr 1fr 1fr;
+	}
+	.mag-grid .feature {
+		grid-column: 1 / 2;
+		grid-row: span 2;
+	}
+}
+
